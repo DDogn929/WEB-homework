@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        img {
+            display: block;
+            border: none;
+        }
+        
+        body {
+            font-family: 'Verdana';
+            font-size: 14px;
+            line-height: 28px;
+        }
+
+        header {
+            width: 1000px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+        }
+
+        header h1 {
+            width: 200px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: yellow;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            background-color: antiquewhite;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav ul:nth-of-type(1) li {
+            padding: 0 5px;
+            background-color: yellow;
+        }
+
+        nav ul:nth-of-type(2) li {
+            padding: 0 5px;
+            background-color: orange;
+        }
+
+        #main {
+            width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #main section {
+        }
+
+        #main section article{
+            width: 700px;
+            border: 2px solid black;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        article>h2 {
+            background-color: antiquewhite;
+        }
+
+        aside {
+            margin-bottom: 10px;
+            width: 290px;
+            border: 2px solid black;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        aside .bannerbox {
+            background-color: gray;
+            margin: 10px 0;
+        }
+
+
+        footer {
+            width: 1000px;
+            height: 50px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            box-sizing: border-box;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WEB-logo</h1>
+        <nav>
+            <ul>
+                <li>menu-1</li>
+                <li>menu-1</li>
+                <li>menu-1</li>
+                <li>menu-1</li>
+            </ul>
+
+            <ul>
+                <li>menu-2</li>
+                <li>menu-2</li>
+                <li>menu-2</li>
+                <li>menu-2</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="main">
+        <section>
+            <article>
+                <h2>Main Article</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, ad! Consectetur rem illum praesentium in accusamus, enim, harum esse odio nobis labore beatae ipsam qui deleniti fugit est repellendus dolores!</p>
+            </article>
+
+            <article>
+                <h2>Main Article</h2>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt fugit nostrum enim tempora? Officia mollitia ad voluptatum laborum. Quaerat obcaecati id voluptatibus magnam aspernatur enim blanditiis inventore laudantium tenetur praesentium!
+                </p>
+            </article>
+
+            <article>
+                <h2>Main Article</h2>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt fugit nostrum enim tempora? Officia mollitia ad voluptatum laborum. Quaerat obcaecati id voluptatibus magnam aspernatur enim blanditiis inventore laudantium tenetur praesentium!
+                </p>
+            </article>
+        </section>
+
+        <aside>
+            <h2>Right aside</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ratione officia nam voluptates, dignissimos maxime illo magnam accusamus quia, labore saepe quam voluptate veniam at nihil debitis cum excepturi aut.
+            </p>
+            <label for="email">Mail</label>
+            <input type="email" />
+            <button>mailto</button>
+            <div class="bannerbox">
+                <h2>TEXT</h2>
+                <p>banner</p>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>HTML5 COPYRIGHT</p>
+    </footer>
+    
+</body>
+</html>
