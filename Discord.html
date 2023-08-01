@@ -15,13 +15,13 @@
         }
 
         header {
-            width: 100%;
+            /* width: 100%; */
             height: 64px;
             padding: 0 32px;
         }
 
         .header-menu {
-            max-width: 1100px;
+            max-width: 1160px;
             height: 64px;
             margin: 0 auto;
             display: flex;
@@ -43,15 +43,19 @@
             font-weight: 700;
         }
 
+        .header-menu-arrow {
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            gap: 5px;
+        }
+
         .header-buger {
             display: none;
-            outline: 0;
-            border: 0;
-            background-color: transparent;
         }
 
         .banner {
-            width: 100%;
+            /* width: 100%; */
             height: 320px;
             padding: 0 32px;
             background-image: url(/discord/b7e9dce75f9edb23504e13b4699e208f204e5015.png);
@@ -76,7 +80,7 @@
             color: white;
             font-weight: 900;
             font-size: 48px;
-            margin-bottom: 50px;
+            margin-bottom: 75px;
         }
 
         .banner-search {
@@ -87,9 +91,10 @@
         }
 
         .banner-search>svg {
+            color: #777777;
             margin: 0 12px;
             position: absolute;
-            transform: translateY(-50%);
+            transform: translateY(-50%); 
             top: 50%;
         }
 
@@ -101,11 +106,11 @@
             font-size: 18px;
             border-style: none;
             box-sizing: border-box;
-            font-weight: 600;
+            font-weight: 550;
         }
 
         main {
-            width: 100%;
+            /* width: 100%; */
             padding: 0 32px;            
         }
 
@@ -154,7 +159,7 @@
             text-align: center;
             font-weight: 900;
             font-size: 24px;
-            margin: 50px;
+            margin: 30px;
         }
 
         .main-menu {
@@ -193,7 +198,7 @@
         }
 
         footer {
-            width: 100%;
+            /* width: 100%; */
             padding: 0 32px;
             background-color: rgb(24, 24, 24);
         }
@@ -215,7 +220,7 @@
             align-items: center;
         }
 
-        .footer-button a button {
+        .footer-button a div {
             width: 100%;
             height: 40px;
             border-radius: 25px;
@@ -223,20 +228,17 @@
             font-weight: 600;
             font-size: 16px;
             background-color: rgb(16, 185, 92);
-            border: 0;
-            outline: 0;
-        }
-
-        .footer-button section {
-            width: 814px;
-            height: 145px;
-            background-image: url(/discord/c9f23a6ae41ebc0d9c21b08c2158c112fd5847b2.png);
-            background-size: cover;
-            background-position: center;
             display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .footer-icon {
+            width: 814px;
+            height: 146px;
+            background-image: url(/discord/c9f23a6ae41ebc0d9c21b08c2158c112fd5847b2.png);
+            background-size: cover;
+            background-position: center;
             position: relative;
         }
 
@@ -244,6 +246,7 @@
             position: absolute;
             transform: translateY(-30%);
             top: 50%;
+            opacity: 50%;
         }
 
         .footer-icon a:nth-child(1) {
@@ -284,8 +287,7 @@
             padding: 30px;
             max-width: 1100px;
             display: flex;
-            justify-content: center;
-            gap: 150px;
+            justify-content: space-between;
         }
 
         .footer-menu nav ul li {
@@ -297,6 +299,28 @@
             color: white;
         }
 
+        .helpsenter {
+              position: fixed;
+              right: 20px;
+              bottom: 15px;
+        }
+
+        .helpsenter a div {
+            width: 140px;
+            height: 45px;
+            border-radius: 25px;
+            background-color: #0067e0;
+            color: white;
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .helpsenter a div svg {
+            fill: white;
+        }
         
         @media screen and (max-width:767px) {
 
@@ -327,16 +351,21 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="">
-                            <button class="header-buger">
+                        <a href="" class="header-buger">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" class="icon-menu">
                                     <path fill="none" stroke="currentColor" stroke-linecap="round" d="M1.5 3.5h13m-13 4h13m-13 4h13"></path>
                                 </svg>
-                            </button>
                         </a>
                     </li>
                     <li><a href="">피드백</a></li>
-                    <li><a href="">한국어</a></li>
+                    <li>
+                        <a href="" class="header-menu-arrow">
+                            <p>한국어</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon">
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"></path>
+                            </svg>
+                        </a>
+                    </li>
                     <li><a href="">문의 등록</a></li>
                     <li><a href="">로그인</a></li>
                 </ul>
@@ -369,66 +398,86 @@
         <section class="main-list">
             <nav>
                 <ul>
-                    <a href="#" class="main-menu">
-                        <img src="/discord/1bd76d1fd516f8dacd3c7422a8ceb929ef2502d9.svg" alt="">
-                        <h3>공지 사항</h3>
-                        <hr>
-                        <p>들어보세요.무언가 심상치 않은 일이 벌어지고 있습니다.</p>
-                    </a>
-                    <a href="#" class="main-menu">
-                        <img src="/discord/8c6c6469bdca01e05d2870e6d373c1d80e290255.svg" alt="">
-                        <h3>Discord 인터페이스</h3>
-                        <hr>
-                        <p>이 버튼은 무엇인가요?!</p>
-                    </a>
-                    <a href="#" class="main-menu">
-                        <img src="/discord/3da6524afd9979b44c5f6ceaf19e812c204ad74e.svg" alt="">
-                        <h3>계정 설정</h3>
-                        <hr>
-                        <p>당신도 당신의 계정도 특별한 눈송이입니다.</p>
-                    </a>
-                    <a href="#" class="main-menu">
-                        <img src="/discord/35f736c34c81d953054d0c1e202f71c8094f8fbf.svg" alt="">
-                        <h3>시작하기</h3>
-                        <hr>
-                        <p>첫 단추를 제대로 끼워야 합니다</p>
-                    </a>
-                    <a href="#" class="main-menu">
-                        <img src="/discord/33f0bd0c3a2c58763cb0404a18bb38da48fc289d.svg" alt="">
-                        <h3>서버 설정</h3>
-                        <hr>
-                        <p>실내 장식 만큼 재미있는 것.</p>
-                    </a>
-                    <a href="#" class="main-menu">
-                        <img src="/discord/dd93acfbff40b1ea53f2b4e8fa51ac142486bd13.svg" alt="">
-                        <h3>커뮤니티 프로그램</h3>
-                        <hr>
-                        <p>HypeSquaders를 위한 광고,파트너를 위한 파티</p>
-                    </a>
-                    <a href="#" class="main-menu">
-                        <img src="/discord/d7415f17818f8caabf5d98099171b227201a3e41.svg" alt="">
-                        <h3>Nitro</h3>
-                        <hr>
-                        <p>쓰러질 때까지 쇼핑하시면 안 돼요!저희가 도와드릴게요.</p>
-                    </a>
-                    <a href="#" class="main-menu">
-                        <img src="/discord/e5bd3c63530b0a8e55b406528f2fd9d61b8bd923.svg" alt="">
-                        <h3>청구서</h3>
-                        <hr>
-                        <p>은행 계좌 잔액을 보는 기분.</p>
-                    </a>
-                    <a href="#" class="main-menu">
-                        <img src="/discord/6f28e83ed890200c649526472dec1e8f593fe1dd.svg" alt="">
-                        <h3>신뢰 & 보안</h3>
-                        <hr>
-                        <p>안전하고 건전하게</p>
-                    </a>
-                    <a href="#" class="main-menu">
-                        <img src="/discord/1883060a5132c470528a20c1cfe42976e7c167ca.svg" alt="">
-                        <h3>자주 묻는 질문</h3>
-                        <hr>
-                        <p>스스로 해결해 보야요.</p>
-                    </a>
+                    <li>
+                        <a href="#" class="main-menu">
+                            <img src="/discord/1bd76d1fd516f8dacd3c7422a8ceb929ef2502d9.svg" alt="">
+                            <h3>공지 사항</h3>
+                            <hr>
+                            <p>들어보세요.무언가 심상치 않은 일이 벌어지고 있습니다.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-menu">
+                            <img src="/discord/8c6c6469bdca01e05d2870e6d373c1d80e290255.svg" alt="">
+                            <h3>Discord 인터페이스</h3>
+                            <hr>
+                            <p>이 버튼은 무엇인가요?!</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-menu">
+                            <img src="/discord/3da6524afd9979b44c5f6ceaf19e812c204ad74e.svg" alt="">
+                            <h3>계정 설정</h3>
+                            <hr>
+                            <p>당신도 당신의 계정도 특별한 눈송이입니다.</p>
+                        </a>
+                    </li>
+                    <li>                       
+                        <a href="#" class="main-menu">
+                            <img src="/discord/35f736c34c81d953054d0c1e202f71c8094f8fbf.svg" alt="">
+                            <h3>시작하기</h3>
+                            <hr>
+                            <p>첫 단추를 제대로 끼워야 합니다</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-menu">
+                            <img src="/discord/33f0bd0c3a2c58763cb0404a18bb38da48fc289d.svg" alt="">
+                            <h3>서버 설정</h3>
+                            <hr>
+                            <p>실내 장식 만큼 재미있는 것.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-menu">
+                            <img src="/discord/dd93acfbff40b1ea53f2b4e8fa51ac142486bd13.svg" alt="">
+                            <h3>커뮤니티 프로그램</h3>
+                            <hr>
+                            <p>HypeSquaders를 위한 광고,파트너를 위한 파티</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-menu">
+                            <img src="/discord/d7415f17818f8caabf5d98099171b227201a3e41.svg" alt="">
+                            <h3>Nitro</h3>
+                            <hr>
+                            <p>쓰러질 때까지 쇼핑하시면 안 돼요!저희가 도와드릴게요.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-menu">
+                            <img src="/discord/e5bd3c63530b0a8e55b406528f2fd9d61b8bd923.svg" alt="">
+                            <h3>청구서</h3>
+                            <hr>
+                            <p>은행 계좌 잔액을 보는 기분.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-menu">
+                            <img src="/discord/6f28e83ed890200c649526472dec1e8f593fe1dd.svg" alt="">
+                            <h3>신뢰 & 보안</h3>
+                            <hr>
+                            <p>안전하고 건전하게</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-menu">
+                            <img src="/discord/1883060a5132c470528a20c1cfe42976e7c167ca.svg" alt="">
+                            <h3>자주 묻는 질문</h3>
+                            <hr>
+                            <p>스스로 해결해 보야요.</p>
+                        </a>
+                    </li>
                 </ul>
             </nav>
             
@@ -436,18 +485,22 @@
             
             <nav>
                 <ul>
-                    <a href="#" class="main-menu">
-                        <img src="/discord/66a7b3885ab7dccb734dd94b9ed3408fc410d30c.svg" alt="">
-                        <h3>게임 개발자</h3>
-                        <hr>
-                        <p>Discord의 API와 SDK를 이용한 봇, 앱, 게임 개발 지원의 집!</p>
-                    </a>
-                    <a href="#" class="main-menu">
-                        <img src="/discord/ceb4c1d378277188ab383a50029b43e5d3b1581b.svg" alt="">
-                        <h3>Twitter</h3>
-                        <hr>
-                        <p>질문이 있으신가요? 저희에게 트윗을 보내주세요!</p>
-                    </a>
+                    <li>
+                        <a href="#" class="main-menu">
+                            <img src="/discord/66a7b3885ab7dccb734dd94b9ed3408fc410d30c.svg" alt="">
+                            <h3>게임 개발자</h3>
+                            <hr>
+                            <p>Discord의 API와 SDK를 이용한 봇, 앱, 게임 개발 지원의 집!</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-menu">
+                            <img src="/discord/ceb4c1d378277188ab383a50029b43e5d3b1581b.svg" alt="">
+                            <h3>Twitter</h3>
+                            <hr>
+                            <p>질문이 있으신가요? 저희에게 트윗을 보내주세요!</p>
+                        </a>
+                    </li>
                 </ul>
             </nav>
 
@@ -456,11 +509,11 @@
 
     <footer>
 
-        <div class="footer-button">
+        <section class="footer-button">
             
-            <a href="#" class="footer-button-more"><button>자세히</button></a>
+            <a href="#" class="footer-button-more"><div>자세히</div></a>
 
-            <section class="footer-icon">
+            <div class="footer-icon">
                 <a href=""><img src="/discord/faa4afbc252ccaa8d959cedf65f6e59b4d75b167.svg" alt=""></a>
 
                 <a href=""><img src="/discord/fc0920a1ef72122cbcd69849ff4431fc8095a11b.svg" alt=""></a>
@@ -470,8 +523,12 @@
                 <a href=""><img src="/discord/47100981c9f8e640b597c228528f303b5b5ae4ac.svg" alt=""></a>
 
                 <a href=""><img src="/discord/22df88a591db1baf678cb7435a7ec52317daba6f.svg" alt=""></a>
-            </section>
-        </div>
+            </div>
+        </section>
+
+        <section class="foorer-button-mobile">
+            <a href=""></a>
+        </section>
 
         <section class="footer-menu">
             <a href=""><img src="/discord/2a944f43170f2222e136854fe9c9e2c9ea6a1971.svg" alt=""></a>
@@ -502,5 +559,15 @@
         </section>
 
     </footer>
+
+    <section class="helpsenter">
+        <a href="#">
+            <div>
+                <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><g id="Layer_4"><path d="M11,12.3V13c0,0-1.8,0-2,0v-0.6c0-0.6,0.1-1.4,0.8-2.1c0.7-0.7,1.6-1.2,1.6-2.1c0-0.9-0.7-1.4-1.4-1.4 c-1.3,0-1.4,1.4-1.5,1.7H6.6C6.6,7.1,7.2,5,10,5c2.4,0,3.4,1.6,3.4,3C13.4,10.4,11,10.8,11,12.3z"></path><circle cx="10" cy="15" r="1"></circle><path d="M10,2c4.4,0,8,3.6,8,8s-3.6,8-8,8s-8-3.6-8-8S5.6,2,10,2 M10,0C4.5,0,0,4.5,0,10s4.5,10,10,10s10-4.5,10-10S15.5,0,10,0 L10,0z"></path></g></svg>
+                <p>고객센터</p>
+            </div>
+        </a>
+    </section>
+
 </body>
 </html>
